@@ -32,11 +32,11 @@
 # Keep kotlinx.coroutines classes
 -keep class kotlinx.coroutines.** { *; }
 
--keep public class com.example.welcomealphalib.Welcome {
-
-}
-
-# Keep all public methods in your library
--keepclassmembers class com.example.welcomealphalib.Welcome  {
-    public *;
-}
+#-keep public class com.example.welcomealphalib.Welcome {
+#
+#}
+#
+## Keep all public methods in your library
+#-keepclassmembers class com.example.welcomealphalib.Welcome  {
+#    public *;
+#}
