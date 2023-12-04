@@ -47,5 +47,5 @@ dependencies {
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
 
     //custom lib
-    implementation("com.github.Iso29:WelcomeLibAttempt2:3.2")
+    implementation("com.github.Iso29:WelcomeLibAttempt2:3.2.0")
 }
