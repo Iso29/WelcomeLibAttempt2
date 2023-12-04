@@ -2,9 +2,9 @@ package com.example.welcomealphalib
 
 import android.util.Log
 
-class Welcome private constructor(){
+public class Welcome private constructor(){
     companion object{
-        fun sayHi(){
+        public fun sayHi(){
             Log.e("WELCOME","Hi everyone")
         }
     }
