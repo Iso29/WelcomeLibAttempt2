@@ -19,6 +19,24 @@
 # If you keep the line number information, uncomment this to
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
--keepclassmembers class com.example.welcomealphalib.Welcome {
+# Keep the entry point to the library
+
+# Keep Kotlin metadata for reflection
+-keep class kotlin.reflect.** { *; }
+-keepclassmembers class kotlin.Metadata { *; }
+-dontwarn kotlin.reflect.**
+
+# Keep Kotlin standard library classes
+-keep class kotlin.** { *; }
+
+# Keep kotlinx.coroutines classes
+-keep class kotlinx.coroutines.** { *; }
+
+-keep public class com.example.welcomealphalib.Welcome {
+
+}
+
+# Keep all public methods in your library
+-keepclassmembers class com.example.welcomealphalib.Welcome  {
     public *;
 }
