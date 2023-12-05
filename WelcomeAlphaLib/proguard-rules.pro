@@ -27,11 +27,15 @@
 #    public *;
 #    public static*;
 #}
-
+#new
 # Allow obfuscation for other classes
--dontshrink class com.example.welcomealphalib.Welcome
+-dontshrink
+-keep class com.example.welcomealphalib.Welcome {
+    public *;
+    public static*;
+}
 
 # General optimization and obfuscation settings
-#-optimizationpasses 5
-#-allowaccessmodification
-#-repackageclasses ''
+-optimizationpasses 5
+-allowaccessmodification
+-repackageclasses ''
