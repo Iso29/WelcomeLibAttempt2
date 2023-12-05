@@ -32,6 +32,15 @@
 # Keep kotlinx.coroutines classes
 -keep class kotlinx.coroutines.** { *; }
 
--keep public class com.example.welcomealphalib.Welcome {
-    public *;
-}
+#-keep public class com.example.welcomealphalib.Welcome {
+#    public *;
+#    public static*;
+#}
+
+# Allow obfuscation for other classes
+-dontshrink class com.example.welcomealphalib.Welcome
+
+# General optimization and obfuscation settings
+-optimizationpasses 5
+-allowaccessmodification
+-repackageclasses ''
