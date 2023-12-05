@@ -32,7 +32,7 @@
 -dontshrink
 -keep class com.example.welcomealphalib.Welcome {
     public *;
-    public static*;
+    public static *;
 }
 
 # General optimization and obfuscation settings
