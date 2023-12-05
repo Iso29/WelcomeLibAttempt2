@@ -12,7 +12,7 @@ android {
         minSdk = 24
         targetSdk = 34
         versionCode = 3
-        versionName = "3.2.7"
+        versionName = "3.2.9"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -48,5 +48,5 @@ dependencies {
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
 
     //custom lib
-    implementation("com.github.Iso29:WelcomeLibAttempt2:3.2.6")
+//    implementation("com.github.Iso29:WelcomeLibAttempt2:3.2.6")
 }
