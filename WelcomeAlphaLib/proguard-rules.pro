@@ -21,16 +21,7 @@
 #-renamesourcefileattribute SourceFile
 # Keep the entry point to the library
 
-# Keep Kotlin metadata for reflection
--keep class kotlin.reflect.** { *; }
--keepclassmembers class kotlin.Metadata { *; }
--dontwarn kotlin.reflect.**
 
-# Keep Kotlin standard library classes
--keep class kotlin.** { *; }
-
-# Keep kotlinx.coroutines classes
--keep class kotlinx.coroutines.** { *; }
 
 #-keep public class com.example.welcomealphalib.Welcome {
 #    public *;
@@ -41,6 +32,6 @@
 -dontshrink class com.example.welcomealphalib.Welcome
 
 # General optimization and obfuscation settings
--optimizationpasses 5
--allowaccessmodification
--repackageclasses ''
+#-optimizationpasses 5
+#-allowaccessmodification
+#-repackageclasses ''
