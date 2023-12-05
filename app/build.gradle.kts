@@ -24,6 +24,7 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+            signingConfig = signingConfigs.getByName("debug")
         }
     }
     compileOptions {
@@ -47,5 +48,5 @@ dependencies {
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
 
     //custom lib
-    implementation("com.github.Iso29:WelcomeLibAttempt2:3.2.4")
+    implementation("com.github.Iso29:WelcomeLibAttempt2:3.2.5")
 }
