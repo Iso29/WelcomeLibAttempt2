@@ -21,33 +21,50 @@
 #-renamesourcefileattribute SourceFile
 # Keep the entry point to the library
 
-
-
-#-keep public class com.example.welcomealphalib.Welcome {
-#    public *;
-#    public static*;
-#}
-#new
-# Allow obfuscation for other classes
-
-#for which you want to generate this report
-
 -dontshrink
-#-keep class com.example.welcomealphalib.**{ *;}
-#-dontwarn com.example.welcomealphalib.**
 
--keep class com.example.welcomealphalib.Welcome {
-     *;
-     static *;
+# Remove the keep rules for specific classes if you want them to be obfuscated
+ -keep class com.example.welcomealphalib.Welcome {
+      *;
+ }
+
+ -keep class com.example.welcomealphalib.WelcomeUtil {
+      *;
+ }
+
+ -keep class com.example.welcomealphalib.Greating {
+      *;
+ }
+
+# Add general keep rules for necessary components like Activities, Services, etc.
+-keep public class * extends android.app.Activity
+-keep public class * extends android.app.Service
+-keep public class * extends android.content.BroadcastReceiver
+-keep public class * extends android.content.ContentProvider
+
+# Preserve annotations, interfaces, enums
+-keepattributes *Annotation*, Signature
+-keep public class * implements java.io.Serializable
+-keep class **.R$* { *; }
+-keepclasseswithmembers class * {
+    native <methods>;
 }
--keep class com.example.welcomealphalib.WelcomeUtil {
-     *;
-     static *;
+
+# Preserve custom views and their constructors
+-keepclasseswithmembers class * {
+    public <init>(android.content.Context);
+    public <init>(android.content.Context, android.util.AttributeSet);
+    public <init>(android.content.Context, android.util.AttributeSet, int);
 }
--keep class com.example.welcomealphalib.Greating {
-     *;
-     static *;
+
+# Preserve methods called via reflection
+-keepclassmembers class * {
+    *** *Field*(...);
+    *** *Method*(...);
 }
+
+# The default rule for all other classes - they will be obfuscated
+-dontwarn **
 
 # General optimization and obfuscation settings
 #-optimizationpasses 5
