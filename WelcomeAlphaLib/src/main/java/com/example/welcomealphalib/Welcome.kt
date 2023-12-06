@@ -2,20 +2,20 @@ package com.example.welcomealphalib
 
 import android.util.Log
 
-public class Welcome constructor(){
+ class Welcome{
     companion object{
-        public fun sayHi(){
+         fun sayHi(){
             Log.e("WELCOME","Hi everyone")
         }
     }
 
-    public val iso_param = 10
+     val iso_param = 10
 
-    public fun greatEveryone(){
+     fun greatEveryone(){
         Log.e("WELCOME","Hi everyone")
     }
 
-    public fun sayHi():String{
+     fun sayHi():String{
         return "Hi dear teammate"
     }
 

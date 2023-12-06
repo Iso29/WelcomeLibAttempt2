@@ -33,20 +33,21 @@
 #for which you want to generate this report
 
 -dontshrink
--keep class com.example.welcomealphalib.**{ *;}
--dontwarn com.example.welcomealphalib.**
-#-keep class com.example.welcomealphalib.Welcome {
-#    public *;
-#    public static *;
-#}
-#-keep class com.example.welcomealphalib.WelcomeUtil {
-#    public static *;
-#    public *;
-#}
-#-keep class com.example.welcomealphalib.Greating {
-#    public *;
-#    public static *;
-#}
+#-keep class com.example.welcomealphalib.**{ *;}
+#-dontwarn com.example.welcomealphalib.**
+
+-keep class com.example.welcomealphalib.Welcome {
+     *;
+     static *;
+}
+-keep class com.example.welcomealphalib.WelcomeUtil {
+     *;
+     static *;
+}
+-keep class com.example.welcomealphalib.Greating {
+     *;
+     static *;
+}
 
 # General optimization and obfuscation settings
 #-optimizationpasses 5

@@ -1,11 +1,10 @@
 package com.example.welcomealphalib
 
-import android.util.Log
 
-public class WelcomeUtil() {
-    public val welcomeInstant = Welcome()
+ class WelcomeUtil() {
+     val welcomeInstant = Welcome()
 
-    public fun callMethods(){
+     fun callMethods(){
         welcomeInstant.greatEveryone()
     }
 
