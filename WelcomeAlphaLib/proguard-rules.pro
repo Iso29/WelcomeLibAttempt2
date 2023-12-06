@@ -31,7 +31,7 @@
 # Allow obfuscation for other classes
 
 #for which you want to generate this report
--printusage <output-dir>/usage.txt
+#-printusage <output-dir>/usage.txt
 
 -dontshrink
 -keep class com.example.welcomealphalib.Welcome {
