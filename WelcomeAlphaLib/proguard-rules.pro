@@ -39,6 +39,11 @@
     public *;
 }
 
+-keep class com.example.welcomealphalib.WelcomeUtil {
+    public static *;
+    public *;
+}
+
 # General optimization and obfuscation settings
 #-optimizationpasses 5
 #-allowaccessmodification
