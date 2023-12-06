@@ -31,22 +31,22 @@
 # Allow obfuscation for other classes
 
 #for which you want to generate this report
-#-printusage <output-dir>/usage.txt
 
 -dontshrink
--keep class com.example.welcomealphalib.Welcome {
-    public *;
-    public static *;
-}
-
--keep class com.example.welcomealphalib.WelcomeUtil {
-    public static *;
-    public *;
-}
-
--keep class com.example.welcomealphalib.Greating {
-    public static *;
-}
+-keep class com.example.welcomealphalib.**{ *;}
+-dontwarn com.example.welcomealphalib.**
+#-keep class com.example.welcomealphalib.Welcome {
+#    public *;
+#    public static *;
+#}
+#-keep class com.example.welcomealphalib.WelcomeUtil {
+#    public static *;
+#    public *;
+#}
+#-keep class com.example.welcomealphalib.Greating {
+#    public *;
+#    public static *;
+#}
 
 # General optimization and obfuscation settings
 #-optimizationpasses 5
