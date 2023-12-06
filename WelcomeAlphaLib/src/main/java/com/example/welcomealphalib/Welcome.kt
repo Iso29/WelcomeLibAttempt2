@@ -15,4 +15,8 @@ public class Welcome constructor(){
         Log.e("WELCOME","Hi everyone")
     }
 
+    public fun sayHi():String{
+        return "Hi dear teammate"
+    }
+
 }

@@ -35,13 +35,17 @@
 
 -dontshrink
 -keep class com.example.welcomealphalib.Welcome {
-    public static *;
     public *;
+    public static *;
 }
 
 -keep class com.example.welcomealphalib.WelcomeUtil {
     public static *;
     public *;
+}
+
+-keep class com.example.welcomealphalib.Greating {
+    public static *;
 }
 
 # General optimization and obfuscation settings
