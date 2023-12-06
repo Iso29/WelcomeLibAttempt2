@@ -29,13 +29,17 @@
 #}
 #new
 # Allow obfuscation for other classes
+
+#for which you want to generate this report
+-printusage <output-dir>/usage.txt
+
 -dontshrink
 -keep class com.example.welcomealphalib.Welcome {
-    public *;
     public static *;
+    public *;
 }
 
 # General optimization and obfuscation settings
--optimizationpasses 5
--allowaccessmodification
--repackageclasses ''
+#-optimizationpasses 5
+#-allowaccessmodification
+#-repackageclasses ''
