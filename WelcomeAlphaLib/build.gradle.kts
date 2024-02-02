@@ -20,7 +20,7 @@ android {
             isMinifyEnabled = true
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro"
+                "consumer-rules.pro"
             )
         }
     }
@@ -49,7 +49,7 @@ afterEvaluate {
                 from(components.findByName("release"))
                 groupId = "com.github.iso29"
                 artifactId = "WelcomeAlphaLib"
-                version = "3.3"
+                version = "3.4"
             }
         }
     }

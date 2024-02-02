@@ -9,6 +9,7 @@ import android.util.Log
         }
     }
 
+     val welcomeName : String = "ISO"
      val iso_param = 10
 
      fun greatEveryone(){
