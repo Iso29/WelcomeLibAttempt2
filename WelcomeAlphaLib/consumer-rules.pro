@@ -5,14 +5,14 @@
 #      *;
 # }
 #
-# -keep class com.example.welcomealphalib.WelcomeUtil {
-#      *;
-# }
+ -keep class com.example.welcomealphalib.WelcomeUtil {
+      *;
+ }
 #
 # -keep class com.example.welcomealphalib.Greating {
 #      *;
 # }
 #
-#  -keep class com.example.welcomealphalib.GreatingUtil {
-#       *;
-#  }
+  -keep class com.example.welcomealphalib.GreatingUtil {
+       *;
+  }
