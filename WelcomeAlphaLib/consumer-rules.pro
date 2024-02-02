@@ -13,6 +13,19 @@
 #      *;
 # }
 #
-  -keep class com.example.welcomealphalib.GreatingUtil {
-       *;
+#  -keep class com.example.welcomealphalib.GreatingUtil {
+#       *;
+#  }
+
+  # Keep the class name and public constructors of GreatingUtil
+  -keep public class com.example.welcomealphalib.GreatingUtil {
+      public <init>();
   }
+
+  # Keep public methods of GreatingUtil that library users need to access
+  -keepclassmembers class com.example.welcomealphalib.GreatingUtil {
+      public void greatIso();
+  }
+
+  # Assuming you want to keep the Greating class entirely unobfuscated
+  -keep class com.example.welcomealphalib.Greating { *; }
