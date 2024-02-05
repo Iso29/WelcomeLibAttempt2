@@ -10,6 +10,13 @@
 # Add any project specific keep options here:
 
 ##---------------Begin: settings, recommended for libraries (https://www.guardsquare.com/en/proguard/manual/examples#library):
+-keep public class com.example.welcomealphalib.GreatingUtil {
+    public *;
+}
+
+#-keep public class com.example.welcomealphalib.Greating {
+#    public *;
+#}
 -keepparameternames
 -renamesourcefileattribute SourceFile
 -keepattributes Exceptions, InnerClasses, Signature, Deprecated, SourceFile, LineNumberTable, *Annotation*, EnclosingMethod
