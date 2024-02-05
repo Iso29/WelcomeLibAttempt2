@@ -3,12 +3,16 @@ package com.example.welcomealphalib
 import android.util.Log
 
 
-public class Greating{
+public class Greating : IGreating{
     companion object{
          val TAG = "GREATING_TAG"
     }
 
-    public fun greatIsoBala(){
+    override fun greatIsoBala(){
         Log.e(TAG,"greatIsoBala() is called")
     }
+}
+
+ interface IGreating{
+     fun greatIsoBala()
 }

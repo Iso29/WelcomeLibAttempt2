@@ -52,7 +52,7 @@ afterEvaluate {
                 from(components.findByName("release"))
                 groupId = "com.github.iso29"
                 artifactId = "WelcomeAlphaLib"
-                version = "3.9.4"
+                version = "3.9.5"
             }
         }
     }
