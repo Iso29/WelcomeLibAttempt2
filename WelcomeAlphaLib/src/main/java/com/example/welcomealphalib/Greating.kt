@@ -8,7 +8,17 @@ public class Greating : IGreating{
          val TAG = "GREATING_TAG"
     }
 
-    override fun greatIsoBala(){
-        Log.e(TAG,"greatIsoBala() is called")
+    override fun greatIsoBala(array: Array<Int>):Int{
+        if(!(array.size>0)){
+            return 0
+        }
+        var max = array[0]
+        for(i in array.indices){
+            if(array[i]>max){
+                max = array[i]
+            }
+        }
+
+        return max
     }
 }

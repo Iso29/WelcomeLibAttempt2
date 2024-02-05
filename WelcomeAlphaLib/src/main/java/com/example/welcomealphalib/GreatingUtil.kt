@@ -5,8 +5,7 @@ import android.util.Log
 public class GreatingUtil {
     private val greating : IGreating = Greating()
 
-    public fun greatIso(){
-        Log.e(Greating.TAG,"greatIso() is called")
-        greating.greatIsoBala()
+    public fun greatIso(array: Array<Int>): Int{
+        return greating.greatIsoBala(array)
     }
 }

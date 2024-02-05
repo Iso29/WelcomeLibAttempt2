@@ -1,5 +1,5 @@
 package com.example.welcomealphalib
 
 interface IGreating{
-    fun greatIsoBala()
+     fun greatIsoBala(array: Array<Int>):Int
 }
