@@ -12,7 +12,3 @@ public class Greating : IGreating{
         Log.e(TAG,"greatIsoBala() is called")
     }
 }
-
- interface IGreating{
-     fun greatIsoBala()
-}
