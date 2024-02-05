@@ -1,7 +1,6 @@
 # Copied most part from standard 'proguard-android.txt', but removed part, related with optimization. Library should not make a decision about turning optimization on or off.
 
 -dontusemixedcaseclassnames
--dontskipnonpubliclibraryclasses
 -verbose
 
 -keepattributes *Annotation*

@@ -12,7 +12,7 @@ android {
         minSdk = 24
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-        consumerProguardFiles("consumer-rules.pro")
+        consumerProguardFiles("android-library-rules.pro","consumer-rules.pro")
     }
 
     buildTypes {
@@ -51,7 +51,7 @@ afterEvaluate {
                 from(components.findByName("release"))
                 groupId = "com.github.iso29"
                 artifactId = "WelcomeAlphaLib"
-                version = "3.8"
+                version = "3.9.1"
             }
         }
     }
