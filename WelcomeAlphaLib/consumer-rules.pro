@@ -1,31 +1,66 @@
--dontshrink
-
-# Remove the keep rules for specific classes if you want them to be obfuscated
-# -keep class com.example.welcomealphalib.Welcome {
-#      *;
-# }
+# Add project specific ProGuard rules here.
+# By default, the flags in this file are appended to flags specified
+# in /Users/finik/work/android-sdk/tools/proguard/proguard-android.txt
+# You can edit the include path and order by changing the proguardFiles
+# directive in build.gradle.
 #
- -keep class com.example.welcomealphalib.WelcomeUtil {
-      *;
- }
-#
-# -keep class com.example.welcomealphalib.Greating {
-#      *;
-# }
-#
-#  -keep class com.example.welcomealphalib.GreatingUtil {
-#       *;
-#  }
+# For more details, see
+#   http://developer.android.com/guide/developing/tools/proguard.html
 
-  # Keep the class name and public constructors of GreatingUtil
-  -keep public class com.example.welcomealphalib.GreatingUtil {
-      public <init>();
-  }
+# Add any project specific keep options here:
 
-  # Keep public methods of GreatingUtil that library users need to access
-  -keepclassmembers class com.example.welcomealphalib.GreatingUtil {
-      public void greatIso();
-  }
+# If your project uses WebView with JS, uncomment the following
+# and specify the fully qualified class name to the JavaScript interface
+# class:
+#-keepclassmembers class fqcn.of.javascript.interface.for.webview {
+#   public *;
+#}
 
-  # Assuming you want to keep the Greating class entirely unobfuscated
-  -keep class com.example.welcomealphalib.Greating { *; }
+##---------------Begin: settings, recommended for libraries (https://www.guardsquare.com/en/proguard/manual/examples#library):  ----------
+-keepparameternames
+-renamesourcefileattribute SourceFile
+-keepattributes Exceptions, InnerClasses, Signature, Deprecated, SourceFile, LineNumberTable, *Annotation*, EnclosingMethod
+
+# Preserve all native method names and the names of their classes.
+-keepclasseswithmembernames, includedescriptorclasses class * {
+    native <methods>;
+}
+
+-keepclassmembers enum * {
+    public static **[] values();
+    public static ** valueOf(java.lang.String);
+}
+
+-keepclassmembers class * implements java.io.Serializable {
+    static final long serialVersionUID;
+    private static final java.io.ObjectStreamField[] serialPersistentFields;
+    private void writeObject(java.io.ObjectOutputStream);
+    private void readObject(java.io.ObjectInputStream);
+    java.lang.Object writeReplace();
+    java.lang.Object readResolve();
+}
+## ---------------End: settings, recommended for libraries  ----------
+
+##---------------Begin: proguard configuration for Gson  ----------
+# Gson uses generic type information stored in a class file when working with fields. Proguard
+# removes such information by default, so configure it to keep all of it.
+-keepattributes Signature
+
+# For using GSON @Expose annotation
+-keepattributes *Annotation*
+
+# Gson specific classes
+#-keep class com.google.gson.stream.** { *; }
+
+# Prevent proguard from stripping interface information from TypeAdapterFactory,
+# JsonSerializer, JsonDeserializer instances (so they can be used in @JsonAdapter)
+-keep class * implements com.google.gson.TypeAdapterFactory
+-keep class * implements com.google.gson.JsonSerializer
+-keep class * implements com.google.gson.JsonDeserializer
+
+##---------------End: proguard configuration for Gson  ----------
+
+## ---------------Begin: custom library settings  ----------
+# Keep all library classes.
+-keep class com.bugsee.shared.obfuscatedlibrary.** { *; }
+##---------------End: custom library settings  ----------le.welcomealphalib.Greating { *; }
