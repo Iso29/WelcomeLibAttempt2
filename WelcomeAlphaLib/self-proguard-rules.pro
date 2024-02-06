@@ -10,9 +10,7 @@
 # Add any project specific keep options here:
 
 ##---------------Begin: settings, recommended for libraries (https://www.guardsquare.com/en/proguard/manual/examples#library):
--keep public class com.example.welcomealphalib.GreatingUtil {
-    public <methods>;
-}
+-keep public class com.example.welcomealphalib.GreatingUtil { *; }
 
 -keep public interface com.example.welcomealphalib.IGreating {
     public *;
