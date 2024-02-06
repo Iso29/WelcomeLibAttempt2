@@ -11,9 +11,9 @@
 #-keepattributes LineNumberTable,SourceFile
 #-renamesourcefileattribute SourceFile
 
--keep class com.example.welcomealphalib.GreatingUtil {
-
-}
+#-keep class com.example.welcomealphalib.GreatingUtil {
+#
+#}
 
 
 -keep public interface com.example.welcomealphalib.IGreating {
