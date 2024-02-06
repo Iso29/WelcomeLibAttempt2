@@ -9,9 +9,9 @@
 
 # Add any project specific keep options here:
 
--keep public class com.example.welcomealphalib.GreatingUtil {
-    public static *;
-    public *;
+-keep class com.example.welcomealphalib.GreatingUtil {
+    static *;
+    *;
 }
 
 -keep public interface com.example.welcomealphalib.IGreating {

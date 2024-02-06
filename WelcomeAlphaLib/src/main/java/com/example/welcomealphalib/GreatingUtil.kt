@@ -2,16 +2,18 @@ package com.example.welcomealphalib
 
 import android.util.Log
 
-public class GreatingUtil {
+class GreatingUtil {
     private val greating : IGreating = Greating()
 
-    public fun greatIso(array: Array<Int>): Int{
+    fun greatIso(array: Array<Int>): Int{
         return greating.greatIsoBala(array)
     }
 
-    public companion object{
-        public fun salamla(){
-
+    companion object{
+        fun salamla(){
+            Log.e(TAG,"COMPAINON")
         }
+
+        private const val TAG = "GREATING_UTIL"
     }
 }
