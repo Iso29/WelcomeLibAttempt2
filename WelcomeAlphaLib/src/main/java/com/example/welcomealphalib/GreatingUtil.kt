@@ -3,6 +3,7 @@ package com.example.welcomealphalib
 import android.util.Log
 import androidx.annotation.Keep
 
+@Keep
 class GreatingUtil private constructor(){
     private val greating : IGreating = Greating()
 
@@ -14,6 +15,11 @@ class GreatingUtil private constructor(){
         @Keep
         fun salamla(){
             Log.e(TAG,"COMPAINON")
+        }
+
+        @Keep
+        fun provideGreating():IGreating{
+            return Greating()
         }
 
         private const val TAG = "GREATING_UTIL"
