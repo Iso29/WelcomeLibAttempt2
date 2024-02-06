@@ -12,12 +12,7 @@
 -renamesourcefileattribute SourceFile
 
 -keep class com.example.welcomealphalib.GreatingUtil {
-    public static <methods>;
-    private static <methods>;
-    public <methods>;
-    private <methods>;
-    public <fields>;
-    private <fields>;
+    *;
 }
 
 
