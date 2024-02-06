@@ -2,6 +2,7 @@ plugins {
     id("com.android.library")
     id("org.jetbrains.kotlin.android")
     id("maven-publish")
+    kotlin("kapt")
 }
 
 android {
@@ -43,6 +44,8 @@ dependencies {
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
     implementation("com.google.code.gson:gson:2.10.1")
 
+    implementation("com.google.dagger:hilt-android:2.47")
+    kapt("com.google.dagger:hilt-android-compiler:2.47")
     testImplementation("com.android.support.test.espresso:espresso-core:3.0.2")
 }
 afterEvaluate {
@@ -52,7 +55,7 @@ afterEvaluate {
                 from(components.findByName("release"))
                 groupId = "com.github.iso29"
                 artifactId = "WelcomeAlphaLib"
-                version = "3.9.7"
+                version = "3.9.8"
             }
         }
     }

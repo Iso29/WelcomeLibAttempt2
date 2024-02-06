@@ -8,4 +8,10 @@ public class GreatingUtil {
     public fun greatIso(array: Array<Int>): Int{
         return greating.greatIsoBala(array)
     }
+
+    companion object{
+        public fun salamla(){
+
+        }
+    }
 }
