@@ -9,7 +9,7 @@ public class GreatingUtil {
         return greating.greatIsoBala(array)
     }
 
-    companion object{
+    public companion object{
         public fun salamla(){
 
         }
