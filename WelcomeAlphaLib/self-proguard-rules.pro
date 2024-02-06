@@ -12,6 +12,7 @@
 ##---------------Begin: settings, recommended for libraries (https://www.guardsquare.com/en/proguard/manual/examples#library):
 -keep public class com.example.welcomealphalib.GreatingUtil {
     public *;
+    static public *;
 }
 
 -keep public interface com.example.welcomealphalib.IGreating {
