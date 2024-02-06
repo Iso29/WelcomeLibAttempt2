@@ -8,10 +8,11 @@
 #   http://developer.android.com/guide/developing/tools/proguard.html
 
 # Add any project specific keep options here:
--keepattributes LineNumberTable,SourceFile
--renamesourcefileattribute SourceFile
+#-keepattributes LineNumberTable,SourceFile
+#-renamesourcefileattribute SourceFile
 
 -keep class com.example.welcomealphalib.GreatingUtil {
+    static *;
     *;
 }
 
