@@ -8,11 +8,15 @@
 #   http://developer.android.com/guide/developing/tools/proguard.html
 
 # Add any project specific keep options here:
-
 -keep class com.example.welcomealphalib.GreatingUtil {
-    static *;
-    *;
+    public static <methods>;
+    private static <methods>;
+    public <methods>;
+    private <methods>;
+    public <fields>;
+    private <fields>;
 }
+
 
 -keep public interface com.example.welcomealphalib.IGreating {
     public *;
