@@ -16,7 +16,7 @@
 #}
 
 
--keepclassmembers class com.example.welcomealphalib.Greating{
+-keepnames class com.example.welcomealphalib.Greating{
     public int greatIsoBala(java.lang.Integer[]);
 }
 -keepparameternames
