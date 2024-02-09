@@ -3,7 +3,6 @@ package com.example.welcomealphalib
 import android.util.Log
 import androidx.annotation.Keep
 
-@Keep
 class Greating : IGreating{
     companion object{
          val TAG = "GREATING_TAG"

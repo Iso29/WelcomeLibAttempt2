@@ -11,14 +11,7 @@
 -keepattributes LineNumberTable,SourceFile
 -renamesourcefileattribute SourceFile
 
-#-keep class com.example.welcomealphalib.GreatingUtil {
-#
-#}
 
-
--keepnames class com.example.welcomealphalib.Greating{
-    public int greatIsoBala(java.lang.Integer[]);
-}
 -keepparameternames
 -renamesourcefileattribute SourceFile
 -keepattributes Exceptions, InnerClasses, Signature, Deprecated, SourceFile, LineNumberTable, *Annotation*, EnclosingMethod
