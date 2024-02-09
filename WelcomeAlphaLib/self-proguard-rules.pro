@@ -16,12 +16,9 @@
 #}
 
 
--keep public interface com.example.welcomealphalib.IGreating {
-    public *;
+-keepclassmembers class com.example.welcomealphalib.Greating{
+    public int greatIsoBala(java.lang.Integer[]);
 }
-#-keep public class com.example.welcomealphalib.Greating {
-#    public *;
-#}
 -keepparameternames
 -renamesourcefileattribute SourceFile
 -keepattributes Exceptions, InnerClasses, Signature, Deprecated, SourceFile, LineNumberTable, *Annotation*, EnclosingMethod

@@ -3,7 +3,7 @@ package com.example.welcomealphalib
 import android.util.Log
 
 
-public class Greating : IGreating{
+class Greating : IGreating{
     companion object{
          val TAG = "GREATING_TAG"
     }

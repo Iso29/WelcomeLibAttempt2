@@ -3,7 +3,6 @@ package com.example.welcomealphalib
 import android.util.Log
 import androidx.annotation.Keep
 
-@Keep
 class GreatingUtil private constructor(){
     private val greating : IGreating = Greating()
 
@@ -12,12 +11,13 @@ class GreatingUtil private constructor(){
     }
 
     companion object{
-        @Keep
-        fun salamla(){
+        fun salamla(array: Array<Int>){
+            var max = array[0]
+            for(i in array.indices){
+            }
             Log.e(TAG,"COMPAINON")
         }
 
-        @Keep
         fun provideGreating():IGreating{
             return Greating()
         }
