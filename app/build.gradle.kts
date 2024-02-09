@@ -50,6 +50,6 @@ dependencies {
     //custom lib
 //    implementation("com.github.Iso29:WelcomeLibAttempt2:3.2.8")
 
-    implementation("com.github.Iso29:sima-sign-test:1.1.7")
+//    implementation("com.github.Iso29:sima-sign-test:1.1.7")
 
 }
